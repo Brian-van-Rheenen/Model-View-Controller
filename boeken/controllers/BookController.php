@@ -9,7 +9,7 @@ class BookController
 		$result = mysqli_query($mysqli, "SELECT id from mphp8_boeken ORDER BY id ASC");
 		
 		// Zijn er boeken gevonden
-		if(mysqli_fetch_array($result) > 0)
+		if(mysqli_num_rows($result) > 0)
 		{
 			// Maak een array van alle boeken
 			$boeken = Array();
